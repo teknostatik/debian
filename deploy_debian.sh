@@ -31,9 +31,12 @@ sudo snap install multipass --classic
 sudo snap install bpytop
 sudo snap install unixbench
 
-# Install everything needed for Tor
+## Install everything needed for ProtonVPN and Tor
+# See https://protonvpn.com/support/linux-vpn-tool/ for how to install
 
 sudo apt install -y openvpn dialog python3-pip python3-setuptools torbrowser-launcher onionshare
+sudo pip3 install protonvpn-cli
+sudo protonvpn init
 
 # Download and install a custom update script
 
