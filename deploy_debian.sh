@@ -14,65 +14,52 @@ set -euo pipefail
 
 # Update software
 
-apt update
-apt -y upgrade
+sudo apt update
+sudo apt -y upgrade
 
 # Install the i3 window manager and some basic utilities
 
-apt install -y i3 i3blocks feh arandr curl byobu synaptic xautolock shellcheck barrier kitty zathura remmina pcmanfm qutebrowser lxde featherpad ranger irssi zsh hexchat
+sudo apt install -y i3 i3blocks feh arandr curl byobu synsudo aptic xautolock shellcheck barrier kitty zathura remmina pcmanfm qutebrowser lxde featherpad ranger irssi zsh hexchat
 # Need to investigate automating ulauncher installation on Debian
-# sudo add-apt-repository ppa:agornostal/ulauncher -y
-# apt install -y ulauncher
+# sudo add-sudo apt-repository ppa:agornostal/ulauncher -y
+# sudo apt install -y ulauncher
 
-# Install some snaps
+# Install some sudo snaps
 
-apt install -y snapd
-snap install multipass --classic
-snap install bpytop
-snap install unixbench
+sudo apt install -y sudo snapd
+sudo snap install multipass --classic
+sudo snap install bpytop
+sudo snap install unixbench
 
-# Install everything needed for ProtonVPN and Tor
-# See https://protonvpn.com/support/linux-vpn-tool/ for how to install
+# Install everything needed for Tor
 
-apt install -y openvpn dialog python3-pip python3-setuptools torbrowser-launcher onionshare
-pip3 install protonvpn-cli
-protonvpn init
+sudo apt install -y openvpn dialog python3-pip python3-setuptools torbrowser-launcher onionshare
 
 # Download and install a custom update script
 
 wget https://raw.githubusercontent.com/teknostatik/updateall/master/updateall
-mv updateall /usr/local/bin/
-chmod 755 /usr/local/bin/updateall
+sudo chmod 755 /usr/local/bin/updateall
 
 # Install some packages to make remote shells more interesting and then add them to the profile for the logged in user
 
-apt install -y neofetch fortune-mod cowsay
+sudo apt install -y neofetch fortune-mod cowsay
 echo "echo; fortune | cowsay;echo" >> .profile
 echo "echo; neofetch;echo" >> .profile
 
 # Install the applications I use for writing, editing and previewing text
 
-snap install --classic atom
-apt install -y pandoc texlive texlive-latex-extra abiword
+sudo snap install --classic atom
+sudo apt install -y pandoc texlive texlive-latex-extra abiword
 
 # Install some desktop applications for creating, editing and playing common media types
-# Some of these are quite large so you might want to comment them out
 
-apt install -y gimp youtube-dl rhythmbox vlc brasero sound-juicer transmission kdenlive
-# curl -sS https://download.spotify.com/debian/pubkey_0D811D58.gpg | apt-key add -
-# echo "deb http://repository.spotify.com stable non-free" | sudo tee /etc/apt/sources.list.d/spotify.list
-# apt-get update && apt-get install -y spotify-client
-# sudo add-apt-repository ppa:obsproject/obs-studio -y
-# apt install -y obs-studio
+sudo apt install -y gimp youtube-dl rhythmbox vlc brasero sound-juicer transmission
 
 ## Add some aliases
 
 echo "alias ls='ls -la'" >> .bashrc
 echo "alias mp='multipass list'" >> .bashrc
 echo "alias top='bpytop'" >> .bashrc
-echo "alias ls='ls -la'" >> .zshrc
-echo "alias mp='multipass list'" >> .zshrc
-echo "alias top='bpytop'" >> .zshrc
 
 # Build a container running the latest Ubuntu LTS for testing things on and running any software that won't work on Debian
 # This will work on a machine with 8GB of RAM, despite what it looks like
@@ -85,15 +72,9 @@ multipass exec ubuntu-lts -- deploy_ubuntu_wsl.sh
 multipass stop ubuntu-lts
 multipass set client.primary-name=ubuntu-lts
 
-# Enable that container (and any future ones) to run graphical apps
-
-mkdir ~/.ssh/multipassKey
-cp /var/snap/multipass/common/data/multipassd/ssh-keys/id_rsa ~/.ssh/multipassKey/id_rsa
-chown $USER -R ~/.ssh/multipassKey
-
 # Download and install Dropbox
 
-apt install -y nautilus-dropbox
+sudo apt install -y nautilus-dropbox
 dropbox start -i
 
 # Set up i3. Comment this out if you want to use your own config file or build your config from scratch.
