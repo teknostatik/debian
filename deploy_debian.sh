@@ -3,6 +3,7 @@
 # Script to run after installing Debian from the netinstall iso (with or without additional apps).
 # This is based on my Ubuntu script and is in heavy development/testing right now.
 # Comment out any sections that don't interest you.
+# You will need sudo to be installed to make this script work (and to be in the group)
 
 echo "-----------------------------------------------------------"
 echo "General purpose Debian installation script - v0.1, May 2021"
@@ -11,12 +12,6 @@ echo "-----------------------------------------------------------"
 # Standard error mitigation
 
 set -euo pipefail
-
-# Become root long enough to give me sudo rights
-
-sudo -H -u root bash -c 'echo "I am $USER now"'
-sudo -H -u root bash -c 'usermod -aG sudo andy'
-echo "I am $USER now"  
 
 # Update software
 
