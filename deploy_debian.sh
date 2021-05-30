@@ -1,7 +1,7 @@
 #!/bin/bash
 
-# Script to run after installing Debian from the netinstal iso (with or without additional apps).
-# This is based on my Ubuntu script and is in heavy development/testing right now
+# Script to run after installing Debian from the netinstall iso (with or without additional apps).
+# This is based on my Ubuntu script and is in heavy development/testing right now.
 # Comment out any sections that don't interest you.
 
 echo "-----------------------------------------------------------"
@@ -24,14 +24,14 @@ sudo apt install -y i3 i3blocks feh arandr git curl byobu synaptic xautolock she
 # sudo add-sudo apt-repository ppa:agornostal/ulauncher -y
 # sudo apt install -y ulauncher
 
-# Install some sudo snaps
+# Install some snaps
 
 sudo apt install -y snapd
 sudo snap install multipass --classic
 sudo snap install bpytop
 sudo snap install unixbench
 
-## Install everything needed for ProtonVPN and Tor
+# Install everything needed for ProtonVPN and Tor
 # See https://protonvpn.com/support/linux-vpn-tool/ for how to install
 
 sudo apt install -y openvpn dialog python3-pip python3-setuptools torbrowser-launcher onionshare
