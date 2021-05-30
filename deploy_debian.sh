@@ -26,7 +26,7 @@ sudo apt install -y i3 i3blocks feh arandr git curl byobu synsudo aptic xautoloc
 
 # Install some sudo snaps
 
-sudo apt install -y sudo snapd
+sudo apt install -y snapd
 sudo snap install multipass --classic
 sudo snap install bpytop
 sudo snap install unixbench
