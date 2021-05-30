@@ -12,6 +12,13 @@ echo "-----------------------------------------------------------"
 
 set -euo pipefail
 
+# Become root long enough to give me sudo rights
+
+sudo -H -u root bash -c 'echo "I am $USER now"'
+sudo -H -u root bash -c 'apt install -y sudo'
+sudo -H -u root bash -c 'usermod -aG sudo andy'
+echo "I am $USER now"  
+
 # Update software
 
 sudo apt update
