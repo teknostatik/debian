@@ -19,7 +19,7 @@ sudo apt -y upgrade
 
 # Install the i3 window manager and some basic utilities
 
-sudo apt install -y i3 i3blocks feh arandr curl byobu synsudo aptic xautolock shellcheck barrier kitty zathura remmina pcmanfm qutebrowser lxde featherpad ranger irssi zsh hexchat
+sudo apt install -y i3 i3blocks feh arandr git curl byobu synsudo aptic xautolock shellcheck barrier kitty zathura remmina pcmanfm qutebrowser lxde featherpad ranger irssi zsh hexchat
 # Need to investigate automating ulauncher installation on Debian
 # sudo add-sudo apt-repository ppa:agornostal/ulauncher -y
 # sudo apt install -y ulauncher
