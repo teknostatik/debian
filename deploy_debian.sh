@@ -20,10 +20,7 @@ sudo apt -y upgrade
 
 # Install the i3 window manager and some basic utilities
 
-sudo apt install -y i3 i3blocks feh arandr git curl byobu synaptic lightdm xautolock shellcheck xinit barrier kitty zathura remmina pcmanfm qutebrowser featherpad ranger hexchat
-# Need to investigate automating ulauncher installation on Debian
-# sudo add-sudo apt-repository ppa:agornostal/ulauncher -y
-# sudo apt install -y ulauncher
+sudo apt install -y i3 i3blocks feh arandr git curl byobu synaptic lightdm xautolock shellcheck xinit kitty zathura pcmanfm featherpad firefox-esr
 
 # Install everything needed for ProtonVPN and Tor
 # See https://protonvpn.com/support/linux-vpn-tool/ for how to install
