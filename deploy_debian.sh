@@ -20,7 +20,7 @@ sudo apt -y upgrade
 
 # Install the i3 window manager and some basic utilities
 
-sudo apt install -y i3 i3blocks feh arandr git curl byobu synaptic lightdm xautolock shellcheck xinit kitty zathura pcmanfm featherpad firefox-esr
+sudo apt install -y i3 i3blocks feh htop arandr git curl byobu synaptic lightdm xautolock shellcheck xinit kitty zathura pcmanfm featherpad firefox-esr
 
 # Install everything needed for ProtonVPN and Tor
 # See https://protonvpn.com/support/linux-vpn-tool/ for how to install
@@ -52,8 +52,7 @@ sudo apt install -y gimp youtube-dl rhythmbox vlc brasero sound-juicer transmiss
 ## Add some aliases
 
 echo "alias ls='ls -la'" >> .bashrc
-echo "alias mp='multipass list'" >> .bashrc
-echo "alias top='bpytop'" >> .bashrc
+echo "alias top='htop'" >> .bashrc
 
 # Download and install Dropbox
 
