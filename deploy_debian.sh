@@ -81,4 +81,8 @@ wget https://raw.githubusercontent.com/teknostatik/i3_config/main/randomise_wall
 sudo mv randomise_wallpaper /usr/local/bin/
 sudo chmod 755 /usr/local/bin/randomise_wallpaper
 
+# Install some drivers that my hardware requires
+
+sudo apt install -y firmware-misc-nonfree firmware-realtek r8168-dkms 
+
 echo "The script has now finished running."
