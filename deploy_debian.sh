@@ -5,9 +5,9 @@
 # Comment out any sections that don't interest you.
 # You will need sudo to be installed to make this script work (and to be in the group)
 
-echo "-----------------------------------------------------------"
-echo "General purpose Debian installation script - v0.1, May 2021"
-echo "-----------------------------------------------------------"
+echo "------------------------------------------------------------"
+echo "General purpose Debian installation script - v0.2, June 2021"
+echo "------------------------------------------------------------"
 
 # Standard error mitigation
 
@@ -20,7 +20,7 @@ sudo apt -y upgrade
 
 # Install the i3 window manager and some basic utilities
 
-sudo apt install -y i3 i3blocks feh htop arandr git curl byobu synaptic lightdm xautolock shellcheck xinit kitty zathura pcmanfm featherpad firefox-esr
+sudo apt install -y i3 i3blocks feh htop arandr git byobu synaptic lightdm xautolock shellcheck xinit kitty zathura pcmanfm featherpad firefox-esr
 
 # Install everything needed for ProtonVPN and Tor
 # See https://protonvpn.com/support/linux-vpn-tool/ for how to install
@@ -81,8 +81,8 @@ wget https://raw.githubusercontent.com/teknostatik/i3_config/main/randomise_wall
 sudo mv randomise_wallpaper /usr/local/bin/
 sudo chmod 755 /usr/local/bin/randomise_wallpaper
 
-# Install some drivers that my hardware requires
+# Install some drivers that my hardware requires (mostly for wifi)
 
-sudo apt install -y firmware-misc-nonfree firmware-realtek r8168-dkms 
+sudo apt install -y firmware-misc-nonfree firmware-realtek r8168-dkms
 
 echo "The script has now finished running."
