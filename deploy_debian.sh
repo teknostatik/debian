@@ -22,12 +22,10 @@ sudo apt -y upgrade
 
 sudo apt install -y i3 i3blocks feh htop arandr git byobu synaptic lightdm xautolock shellcheck xinit kitty zathura pcmanfm featherpad firefox-esr
 
-# Install everything needed for ProtonVPN and Tor
+# Install everything needed for Tor
 # See https://protonvpn.com/support/linux-vpn-tool/ for how to install
 
-sudo apt install -y openvpn dialog python3-pip python3-setuptools torbrowser-launcher onionshare
-sudo pip3 install protonvpn-cli
-sudo protonvpn init
+sudo apt install -y torbrowser-launcher onionshare
 
 # Download and install a custom update script
 
@@ -68,18 +66,21 @@ mv config ~/.config/i3/config
 
 # Set up i3 wallpaper
 
-sudo mkdir /usr/share/wallpaper
+udo mkdir /usr/share/wallpaper
 cd /usr/share/wallpaper
 sudo wget https://www.dropbox.com/s/0yg8txbgw0ifqmg/9dy0gvxq7fl61.png
-sudo wget https://www.dropbox.com/s/j9mmfedrc8r9zba/231-2311974_big.jpg
 sudo wget https://www.dropbox.com/s/cljxhezhxuu3nce/background.png
 sudo wget https://www.dropbox.com/s/f2rkmbv13c8t769/1920x1080-dark-linux.png
 sudo wget https://www.dropbox.com/s/1i7g8u5h6whd5dv/3430638.png
 sudo wget https://www.dropbox.com/s/bkae9ethe3jqbod/jyrji9bnp3171.jpg
+sudo wget https://www.dropbox.com/s/idk05cia43lj5qb/rocket.png
 cd $HOME
 wget https://raw.githubusercontent.com/teknostatik/i3_config/main/randomise_wallpaper
 sudo mv randomise_wallpaper /usr/local/bin/
 sudo chmod 755 /usr/local/bin/randomise_wallpaper
+wget https://raw.githubusercontent.com/teknostatik/i3_config/main/lock.sh
+sudo mv lock.sh /usr/local/bin/
+sudo chmod 755 /usr/local/bin/lock.sh
 
 # Install some drivers that my hardware requires (mostly for wifi)
 
