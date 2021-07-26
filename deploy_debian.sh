@@ -27,6 +27,7 @@ sudo apt install -y htop git byobu synaptic lightdm xautolock shellcheck xinit k
 wget https://raw.githubusercontent.com/teknostatik/i3_config/main/install_i3.sh
 sudo mv install_i3.sh /usr/local/bin/
 sudo chmod 755 /usr/local/bin/install_i3.sh
+install_i3.sh
 
 # Install everything needed for Tor
 # See https://protonvpn.com/support/linux-vpn-tool/ for how to install
