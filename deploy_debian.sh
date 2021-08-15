@@ -5,9 +5,9 @@
 # Comment out any sections that don't interest you.
 # You will need sudo to be installed to make this script work (and to be in the group)
 
-echo "------------------------------------------------------------"
-echo "General purpose Debian installation script - v0.2, June 2021"
-echo "------------------------------------------------------------"
+echo "--------------------------------------------------------------"
+echo "General purpose Debian installation script - v0.4, August 2021"
+echo "--------------------------------------------------------------"
 
 # Standard error mitigation
 
@@ -20,7 +20,7 @@ sudo apt -y upgrade
 
 # Install some basic utilities
 
-sudo apt install -y htop git byobu synaptic lightdm xautolock shellcheck xinit kitty zathura pcmanfm featherpad firefox-esr
+sudo apt install -y htop git byobu synaptic lightdm xautolock shellcheck xinit kitty zathura pcmanfm featherpad firefox-esr irssi mplayer
 
 # Install and configure i3
 
