@@ -25,4 +25,4 @@ Then download the script and make it executable:
 
 I've tested this on top of a full desktop install and a command line only installation as well. My goal is to get a working i3 environment so the latter is probably what I'm going to focus on going forward.
 
-Now Bullseye is released I'll probably spend a bit more time on this.
+Now Bullseye is released I'll probably spend a bit more time on this and am now running this exact build on one of my computers. 
