@@ -11,6 +11,8 @@ Before you run this script ensure that you have `sudo` installed and that your u
     apt install -y sudo
     sudo usermod -aG sudo <your username>
 
+Or alternately, install Debian without a root password and this step shouldn't be required.
+
 You will also need some extra repositories enabled. My `/etc/apt/sources.list` looks like this:
 
     deb http://deb.debian.org/debian bullseye main contrib non-free
@@ -23,6 +25,4 @@ Then download the script and make it executable:
     chmod 755 deploy_debian.sh
     ./deploy_debian.sh
 
-I've tested this on top of a full desktop install and a command line only installation as well. My goal is to get a working i3 environment so the latter is probably what I'm going to focus on going forward.
-
-Now Bullseye is released I'll probably spend a bit more time on this and am now running this exact build on one of my computers. 
+I've tested this on top of a full desktop install and a command line only installation as well. I've been using this exact setup on a 10 year old Mac Mini for about a month now, and found it surprisingly responsive.
