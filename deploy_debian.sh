@@ -6,7 +6,7 @@
 # You will need sudo to be installed to make this script work (and to be in the group)
 
 echo "--------------------------------------------------------------"
-echo "General purpose Debian installation script - v0.4, August 2021"
+echo "General purpose Debian installation script - v0.5, July 2023"
 echo "--------------------------------------------------------------"
 
 # Standard error mitigation
@@ -20,7 +20,7 @@ sudo apt -y upgrade
 
 # Install some basic utilities
 
-sudo apt install -y htop git byobu synaptic lightdm xautolock shellcheck xinit kitty zathura pcmanfm featherpad firefox-esr irssi mplayer network-manager-gnome nautilus rsync
+sudo apt install -y htop git byobu synaptic xautolock shellcheck xinit kitty zathura pcmanfm featherpad firefox-esr irssi mplayer network-manager-gnome nautilus rsync neofetch
 
 # Install and configure i3
 
@@ -58,13 +58,8 @@ sudo apt install -y gimp youtube-dl rhythmbox vlc brasero sound-juicer transmiss
 echo "alias ls='ls -la'" >> .bashrc
 echo "alias top='htop'" >> .bashrc
 
-# Download and install Dropbox
-
-sudo apt install -y nautilus-dropbox
-dropbox start -i
-
 # Install some drivers that my hardware requires (mostly for wifi)
 
-sudo apt install -y firmware-misc-nonfree firmware-realtek r8168-dkms
+# sudo apt install -y firmware-misc-nonfree firmware-realtek r8168-dkms
 
 echo "The script has now finished running."
