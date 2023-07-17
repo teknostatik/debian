@@ -51,9 +51,15 @@ sudo apt install -y pandoc texlive texlive-latex-extra abiword
 
 # Install some desktop applications for creating, editing and playing common media types
 
-sudo apt install -y gimp youtube-dl rhythmbox vlc brasero sound-juicer transmission
+sudo apt install -y gimp rhythmbox vlc brasero sound-juicer transmission
 
-## Add some aliases
+# Install Flatpak
+
+sudo apt install -y flatpak gnome-software-plugin-flatpak
+flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
+
+
+# Add some aliases
 
 echo "alias ls='ls -la'" >> .bashrc
 echo "alias top='htop'" >> .bashrc
