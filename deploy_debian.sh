@@ -64,8 +64,9 @@ flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flat
 echo "alias ls='ls -la'" >> .bashrc
 echo "alias top='htop'" >> .bashrc
 
-# Install some drivers that my hardware requires (mostly for wifi)
+# Download and install Dropbox
 
-# sudo apt install -y firmware-misc-nonfree firmware-realtek r8168-dkms
+sudo apt install -y nautilus-dropbox
+dropbox start -i
 
 echo "The script has now finished running."
