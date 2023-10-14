@@ -66,9 +66,14 @@ flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flat
 # Install snapd
 # Most people won't do this, but I think documenting a working installation of this is important
 
-sudo apt install snapd
+sudo apt install -y snapd
 sudo snap install core
 sudo ln -s /var/lib/snapd/snap /snap
+
+# Install some snaps
+
+sudo snap install tube-converter
+
 
 # Add some aliases
 
@@ -80,4 +85,4 @@ echo "alias top='htop'" >> .bashrc
 sudo apt install -y nautilus-dropbox
 dropbox start -i
 
-echo "The script has now finished running."
+echo "The script has now finished running.
