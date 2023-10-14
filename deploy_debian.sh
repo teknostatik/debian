@@ -5,13 +5,18 @@
 # Comment out any sections that don't interest you.
 # You will need sudo to be installed to make this script work (and to be in the group)
 
-echo "--------------------------------------------------------------"
-echo "General purpose Debian installation script - v0.5, July 2023"
-echo "--------------------------------------------------------------"
+echo "---------------------------------------------------------------"
+echo "General purpose Debian installation script - v0.6, October 2023"
+echo "---------------------------------------------------------------"
 
 # Standard error mitigation
 
 set -euo pipefail
+
+# Get a new sources.list that will alow installation of everything in this script
+
+wget https://raw.githubusercontent.com/teknostatik/debian/master/sources.list
+sudo mv sources.list /etc/apt/
 
 # Update software
 
@@ -58,6 +63,12 @@ sudo apt install -y gimp rhythmbox vlc brasero sound-juicer transmission
 sudo apt install -y flatpak gnome-software-plugin-flatpak
 flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
 
+# Install snapd
+# Most people won't do this, but I think documenting a working installation of this is important
+
+sudo apt install snapd
+sudo snap install core
+sudo ln -s /var/lib/snapd/snap /snap
 
 # Add some aliases
 
