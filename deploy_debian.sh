@@ -27,12 +27,35 @@ sudo apt -y upgrade
 
 sudo apt install -y htop git byobu synaptic xautolock shellcheck xinit kitty zathura pcmanfm featherpad firefox-esr irssi mplayer network-manager-gnome nautilus rsync neofetch
 
-# Install and configure i3
+# Install the i3 window manager and some basic utilities (all of these are referenced in my i3 config file, so need to be installed)
 
-wget https://raw.githubusercontent.com/teknostatik/i3_config/main/install_i3.sh
-sudo mv install_i3.sh /usr/local/bin/
-sudo chmod 755 /usr/local/bin/install_i3.sh
-install_i3.sh
+sudo apt install -y i3 i3blocks feh arandr scrot xautolock barrier kitty imagemagick polybar caffeine
+
+# Set up i3. Comment this out if you want to use your own config file or build your config from scratch.
+
+wget https://raw.githubusercontent.com/teknostatik/i3_config/main/config
+wget https://raw.githubusercontent.com/teknostatik/i3_config/main/lock.sh
+wget https://raw.githubusercontent.com/teknostatik/i3_config/main/kitty.conf
+wget https://raw.githubusercontent.com/teknostatik/i3_config/main/polybar_config
+mkdir /home/andy/.config/i3
+mv config /home/andy/.config/i3/
+sudo mv lock.sh /usr/local/bin/
+mkdir /home/andy/.config/kitty
+mv kitty.conf /home/andy/.config/kitty/
+mkdir /home/andy/.config/polybar
+mv polybar_config /home/andy/.config/polybar/config
+
+# Set up i3 wallpaper
+
+sudo mkdir /usr/share/wallpaper
+# Copy any existing wallpapers into this new directory (delete any you don't like later)
+sudo cp -R /usr/share/backgrounds/* /usr/share/wallpaper
+
+# In my i3 config file we switch wallpaper using MOD + Z, but this requires a script
+cd $HOME
+wget https://raw.githubusercontent.com/teknostatik/i3_config/main/randomise_wallpaper
+sudo mv randomise_wallpaper /usr/local/bin/
+sudo chmod 755 /usr/local/bin/randomise_wallpaper
 
 # Install everything needed for Tor
 
