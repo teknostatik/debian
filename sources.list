@@ -16,8 +16,3 @@ deb-src http://mirror.mythic-beasts.com/debian/ bookworm-updates main non-free-f
 # entries were disabled at the end of the installation process.
 # For information about how to configure apt package sources,
 # see the sources.list(5) manual.
-
-# experimental 3rd party sources
-
-deb [arch=amd64,arm64,armhf] http://packages.microsoft.com/repos/code stable main
-deb http://download.zerotier.com/debian/bookworm bookworm main
