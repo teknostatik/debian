@@ -96,7 +96,7 @@ sudo ln -s /var/lib/snapd/snap /snap
 # Install some snaps
 
 sudo snap install tube-converter
-
+sudo snap install unixbench
 
 # Add some aliases
 
