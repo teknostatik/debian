@@ -25,7 +25,7 @@ sudo apt -y upgrade
 
 # Install some basic utilities
 
-sudo apt install -y htop git byobu synaptic xautolock shellcheck xinit kitty zathura pcmanfm featherpad firefox-esr irssi mplayer network-manager-gnome nautilus rsync neofetch
+sudo apt install -y htop git byobu synaptic xautolock shellcheck xinit kitty zathura pcmanfm featherpad firefox-esr irssi mplayer network-manager-gnome nautilus rsync neofetch gnome-core curl
 
 # Install the i3 window manager and some basic utilities (all of these are referenced in my i3 config file, so need to be installed)
 
@@ -48,7 +48,9 @@ mv polybar_config /home/andy/.config/polybar/config
 # Set up i3 wallpaper
 
 sudo mkdir /usr/share/wallpaper
+
 # Copy any existing wallpapers into this new directory (delete any you don't like later)
+
 sudo cp -R /usr/share/backgrounds/* /usr/share/wallpaper
 
 # In my i3 config file we switch wallpaper using MOD + Z, but this requires a script
@@ -82,9 +84,15 @@ sudo apt install -y pandoc texlive texlive-latex-extra abiword
 sudo apt install -y gimp rhythmbox vlc brasero sound-juicer transmission
 
 # Install Flatpak
+# Most people won't do this, but I think documenting a working installation of this is important
 
 sudo apt install -y flatpak gnome-software-plugin-flatpak
 flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
+
+# install vscode
+
+flatpak install flathub com.visualstudio.code -y
+
 
 # Install snapd
 # Most people won't do this, but I think documenting a working installation of this is important
@@ -102,6 +110,22 @@ sudo snap install unixbench
 
 echo "alias ls='ls -la'" >> .bashrc
 echo "alias top='htop'" >> .bashrc
+
+# Set up git
+
+git config --global user.name "Andy Ferguson"
+git config --global user.email "teknostatik@protonmail.com"
+
+# install ProtonVPN
+
+wget https://repo.protonvpn.com/debian/dists/stable/main/binary-all/protonvpn-stable-release_1.0.3-2_all.deb
+sudo dpkg -i protonvpn-stable-release_1.0.3-2_all.deb
+sudo apt update
+sudo apt install -y proton-vpn-gnome-desktop
+
+# Install Zerotier
+
+curl -s https://install.zerotier.com | sudo bash
 
 # Download and install Dropbox
 
