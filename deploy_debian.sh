@@ -89,10 +89,11 @@ sudo apt install -y gimp rhythmbox vlc brasero sound-juicer transmission
 # sudo apt install -y flatpak gnome-software-plugin-flatpak
 # flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
 
-# install vscode
+# install some flatpaks
 
 # flatpak install flathub com.visualstudio.code -y
 # flatpak install flathub com.firefox -y
+# flatpak install flathub org.nickvision.tubeconverter -y
 
 
 # Install snapd
