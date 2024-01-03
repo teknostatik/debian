@@ -29,7 +29,7 @@ sudo apt install -y htop git byobu synaptic xautolock shellcheck xinit kitty zat
 
 # Install the i3 window manager and some basic utilities (all of these are referenced in my i3 config file, so need to be installed)
 
-sudo apt install -y i3 i3blocks feh arandr scrot xautolock barrier kitty imagemagick polybar caffeine copyq
+sudo apt install -y i3 i3blocks feh arandr scrot xautolock barrier kitty imagemagick polybar caffeine copyq picom
 
 # Set up i3. Comment this out if you want to use your own config file or build your config from scratch.
 
@@ -86,25 +86,25 @@ sudo apt install -y gimp rhythmbox vlc brasero sound-juicer transmission
 # Install Flatpak
 # Most people won't do this, but I think documenting a working installation of this is important
 
-sudo apt install -y flatpak gnome-software-plugin-flatpak
-flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
+# sudo apt install -y flatpak gnome-software-plugin-flatpak
+# flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
 
 # install vscode
 
-flatpak install flathub com.visualstudio.code -y
+# flatpak install flathub com.visualstudio.code -y
 
 
 # Install snapd
 # Most people won't do this, but I think documenting a working installation of this is important
 
-sudo apt install -y snapd
-sudo snap install core
-sudo ln -s /var/lib/snapd/snap /snap
+# sudo apt install -y snapd
+# sudo snap install core
+# sudo ln -s /var/lib/snapd/snap /snap
 
 # Install some snaps
 
-sudo snap install tube-converter
-sudo snap install unixbench
+# sudo snap install tube-converter
+# sudo snap install unixbench
 
 # Add some aliases
 
