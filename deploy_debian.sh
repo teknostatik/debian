@@ -92,6 +92,7 @@ sudo apt install -y gimp rhythmbox vlc brasero sound-juicer transmission
 # install vscode
 
 # flatpak install flathub com.visualstudio.code -y
+# flatpak install flathub com.firefox -y
 
 
 # Install snapd
