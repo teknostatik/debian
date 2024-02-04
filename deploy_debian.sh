@@ -116,7 +116,7 @@ echo "alias top='htop'" >> .bashrc
 # Set up git
 
 git config --global user.name "Andy Ferguson"
-git config --global user.email "teknostatik@protonmail.com"
+git config --global user.email "andy@teknostatik.org"
 
 # install ProtonVPN
 
