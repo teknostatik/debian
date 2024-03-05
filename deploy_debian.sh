@@ -71,13 +71,15 @@ sudo chmod 755 /usr/local/bin/updateall
 
 # Install some packages to make remote shells more interesting and then add them to the profile for the logged in user
 
-sudo apt install -y neofetch fortune-mod cowsay
+wget https://github.com/fastfetch-cli/fastfetch/releases/download/2.8.7/fastfetch-linux-amd64.deb
+sudo dpkg -i fastfetch-linux-amd64.deb
+sudo apt install -y fortune-mod cowsay
 echo "echo; fortune | cowsay;echo" >> .profile
-echo "echo; neofetch;echo" >> .profile
+echo "echo; fastfetch;echo" >> .profile
 
 # Install the applications I use for writing, editing and previewing text
 
-sudo apt install -y pandoc texlive texlive-latex-extra abiword
+sudo apt install -y pandoc texlive texlive-latex-extra
 
 # Install some desktop applications for creating, editing and playing common media types
 
@@ -94,7 +96,6 @@ sudo apt install -y gimp rhythmbox vlc brasero sound-juicer transmission
 # flatpak install flathub com.visualstudio.code -y
 # flatpak install flathub com.firefox -y
 # flatpak install flathub org.nickvision.tubeconverter -y
-
 
 # Install snapd
 # Most people won't do this, but I think documenting a working installation of this is important
