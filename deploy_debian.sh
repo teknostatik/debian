@@ -122,6 +122,12 @@ sudo apt install -y gimp rhythmbox vlc brasero sound-juicer transmission
 echo "alias ls='ls -la'" >> .bashrc
 echo "alias top='htop'" >> .bashrc
 
+# Install drivers for Displaylink docking stations, such as the lenovo and Dell ones I use at home and work
+
+git clone https://github.com/AdnanHodzic/displaylink-debian.git
+cd displaylink-debian
+sudo ./displaylink-debian.sh
+
 # Set up git
 
 git config --global user.name "Andy Ferguson"
