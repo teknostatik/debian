@@ -5,9 +5,9 @@
 # Comment out any sections that don't interest you.
 # You will need sudo to be installed to make this script work (and to be in the group)
 
-echo "---------------------------------------------------------------"
-echo "General purpose Debian installation script - v0.6, October 2023"
-echo "---------------------------------------------------------------"
+echo "-------------------------------------------"
+echo "General purpose Debian installation script "
+echo "-------------------------------------------"
 
 # Standard error mitigation
 
@@ -54,6 +54,7 @@ sudo mkdir /usr/share/wallpaper
 sudo cp -R /usr/share/backgrounds/* /usr/share/wallpaper
 
 # In my i3 config file we switch wallpaper using MOD + Z, but this requires a script
+
 cd $HOME
 wget https://raw.githubusercontent.com/teknostatik/i3_config/main/randomise_wallpaper
 sudo mv randomise_wallpaper /usr/local/bin/
@@ -79,7 +80,7 @@ echo "echo; fastfetch;echo" >> .profile
 
 # Install the applications I use for writing, editing and previewing text
 
-sudo apt install -y pandoc texlive texlive-latex-extra
+sudo apt install -y pandoc texlive texlive-latex-extra abiword
 sudo apt-get install gpg
 wget -qO- https://packages.microsoft.com/keys/microsoft.asc | gpg --dearmor > packages.microsoft.gpg
 sudo install -D -o root -g root -m 644 packages.microsoft.gpg /etc/apt/keyrings/packages.microsoft.gpg
