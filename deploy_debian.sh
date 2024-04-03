@@ -27,7 +27,7 @@ sudo apt -y upgrade
 
 # Install some basic utilities
 
-sudo apt install -y htop git byobu synaptic xautolock shellcheck xinit kitty zathura pcmanfm featherpad firefox-esr irssi mplayer network-manager-gnome nautilus rsync neofetch gnome-core curl
+sudo apt install -y htop git byobu synaptic xautolock shellcheck xinit kitty zathura pcmanfm irssi mplayer network-manager-gnome rsync neofetch curl
 
 # Install the i3 window manager and some basic utilities (all of these are referenced in my i3 config file, so need to be installed)
 
@@ -97,16 +97,15 @@ sudo apt install code
 sudo apt install -y gimp rhythmbox vlc brasero sound-juicer transmission
 
 # Install Flatpak
-# Most people won't do this, but I think documenting a working installation of this is important
 
-# sudo apt install -y flatpak gnome-software-plugin-flatpak
-# flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
+sudo apt install -y flatpak gnome-software-plugin-flatpak
+flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
 
 # install some flatpaks
 
-# flatpak install flathub com.visualstudio.code -y
-# flatpak install flathub com.firefox -y
-# flatpak install flathub org.nickvision.tubeconverter -y
+flatpak install flathub com.visualstudio.code -y
+flatpak install flathub com.firefox -y
+flatpak install flathub org.nickvision.tubeconverter -y
 
 # Install snapd
 # Most people won't do this, but I think documenting a working installation of this is important
