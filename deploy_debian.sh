@@ -129,6 +129,7 @@ echo "alias top='htop'" >> .bashrc
 git clone https://github.com/AdnanHodzic/displaylink-debian.git
 cd displaylink-debian
 sudo ./displaylink-debian.sh
+cd ..
 
 # Set up git
 
