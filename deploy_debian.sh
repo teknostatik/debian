@@ -103,7 +103,7 @@ flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flat
 
 # install some flatpaks
 
-flatpak install flathub com.visualstudio.code -y
+# flatpak install flathub com.visualstudio.code -y
 flatpak install flathub com.firefox -y
 flatpak install flathub org.nickvision.tubeconverter -y
 
