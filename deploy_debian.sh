@@ -98,14 +98,14 @@ sudo apt install -y gimp rhythmbox vlc brasero sound-juicer transmission
 
 # Install Flatpak
 
-sudo apt install -y flatpak gnome-software-plugin-flatpak
-flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
+# sudo apt install -y flatpak gnome-software-plugin-flatpak
+# flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
 
 # install some flatpaks
 
 # flatpak install flathub com.visualstudio.code -y
-flatpak install flathub com.firefox -y
-flatpak install flathub org.nickvision.tubeconverter -y
+# flatpak install flathub com.firefox -y
+# flatpak install flathub org.nickvision.tubeconverter -y
 
 # Install snapd
 # Most people won't do this, but I think documenting a working installation of this is important
@@ -146,6 +146,14 @@ sudo apt install -y proton-vpn-gnome-desktop
 # Install Zerotier
 
 curl -s https://install.zerotier.com | sudo bash
+
+# Download unixbench
+
+sudo apt-get install libx11-dev libgl1-mesa-dev libxext-dev perl perl-modules make git
+git clone https://github.com/kdlucas/byte-unixbench.git
+# uncomment tne next 2 lines to run the benchmark now
+# cd byte-unixbench/UnixBench/
+# ./Run
 
 # Download and install Dropbox
 
