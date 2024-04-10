@@ -13,12 +13,10 @@ echo "-------------------------------------------"
 
 set -euo pipefail
 
-# Get a new sources.list that will allow installation of everything in this script
-# Currently this is for version 12. If you're not running that, then this is not for you and you should comment out these lines.
+# Add repositories
 
-wget https://raw.githubusercontent.com/teknostatik/debian/master/sources.list
-sudo mv /etc/apt/sources.list /etc/apt/sources.list_old
-sudo mv sources.list /etc/apt/
+sudo apt install -y software-properties-common
+sudo add-apt-repository contrib non-free
 
 # Update software
 
