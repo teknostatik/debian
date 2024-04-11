@@ -25,7 +25,7 @@ sudo apt -y upgrade
 
 # Install some basic utilities
 
-sudo apt install -y htop git byobu synaptic xautolock shellcheck xinit kitty zathura pcmanfm irssi mplayer network-manager-gnome rsync neofetch curl
+sudo apt install -y htop git byobu synaptic xautolock shellcheck xinit kitty zathura pcmanfm irssi mplayer network-manager-gnome rsync neofetch curl ttf-mscorefonts-installer build-essential
 
 # Install the i3 window manager and some basic utilities (all of these are referenced in my i3 config file, so need to be installed)
 
