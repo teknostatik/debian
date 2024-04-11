@@ -92,14 +92,14 @@ sudo apt install -y gimp rhythmbox vlc brasero sound-juicer
 
 # Install Flatpak
 
-sudo apt install -y flatpak gnome-software-plugin-flatpak
-flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
+# sudo apt install -y flatpak gnome-software-plugin-flatpak
+# flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
 
 # install some flatpaks
 
 # flatpak install flathub com.visualstudio.code -y
 # flatpak install flathub com.firefox -y
-flatpak install flathub org.nickvision.tubeconverter -y
+# flatpak install flathub org.nickvision.tubeconverter -y
 
 # Install snapd
 # Most people won't do this, but I think documenting a working installation of this is important
