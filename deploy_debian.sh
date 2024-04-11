@@ -139,7 +139,7 @@ sudo apt install -y proton-vpn-gnome-desktop
 
 # Install Zerotier
 
-# curl -s https://install.zerotier.com | sudo bash
+curl -s https://install.zerotier.com | sudo bash
 
 # Download unixbench
 
