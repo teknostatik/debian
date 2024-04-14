@@ -123,6 +123,8 @@ echo "alias top='htop'" >> .bashrc
 git clone https://github.com/AdnanHodzic/displaylink-debian.git
 cd displaylink-debian
 sudo ./displaylink-debian.sh
+wget https://raw.githubusercontent.com/teknostatik/debian/master/20-displaylink.conf
+sudo mv 20-displaylink.conf /etc/X11/xorg.conf.d/
 cd ..
 
 # Set up git
