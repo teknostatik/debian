@@ -2,7 +2,7 @@
 
 This is a fork of my [Ubuntu scripts](https://github.com/teknostatik/deploy_ubuntu).
 
-Very much a work in progress, and I wouldn't recommend running this on a machine you care about.
+I have run this on three computers now, and it give sme everything I need to be productive. As always, your milage may vary.
 
 ## Installation
 
@@ -13,16 +13,8 @@ Before you run this script ensure that you have `sudo` installed and that your u
 
 Or alternately, install Debian without a root password and this step shouldn't be required.
 
-You will also need some extra repositories enabled. My `/etc/apt/sources.list` looks like this:
-
-    deb http://deb.debian.org/debian bullseye main contrib non-free
-    deb http://security.debian.org/debian-security bullseye/updates main contrib non-free
-
-
 Then download the script and make it executable:
 
     wget https://raw.githubusercontent.com/teknostatik/debian/master/deploy_debian.sh
     chmod 755 deploy_debian.sh
     ./deploy_debian.sh
-
-I've tested this on top of a full desktop install and a command line only installation as well. I've been using this exact setup on a 10 year old Mac Mini for about a month now, and found it surprisingly responsive.
