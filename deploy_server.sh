@@ -2,12 +2,12 @@
 
 # Script to run after installing Debian from the netinstall iso
 # All command-line stuff designed for headless servers
-# Comment out any sections that don't interest you.
+# Comment out any sections that don't interest you
 # You will need sudo to be installed to make this script work (and to be in the group)
 
-echo "-------------------------------------------"
+echo "----------------------------------------"
 echo "Command Line Debian installation script "
-echo "-------------------------------------------"
+echo "----------------------------------------"
 
 # Standard error mitigation
 
