@@ -2,7 +2,7 @@
 
 This is a fork of my [Ubuntu scripts](https://github.com/teknostatik/deploy_ubuntu).
 
-I have run this on three computers now, and it give sme everything I need to be productive. As always, your milage may vary.
+I have run this on three computers now, and it gives me everything I need to be productive. As always, your milage may vary.
 
 ## Installation
 
@@ -18,3 +18,7 @@ Then download the script and make it executable:
     wget https://raw.githubusercontent.com/teknostatik/debian/master/deploy_debian.sh
     chmod 755 deploy_debian.sh
     ./deploy_debian.sh
+
+## Versions
+
+As well as the desktop version, there is now a script to install a server. This has no graphical applications at all, but does have an SSH server to allow remote access. I's recommend _not_ enabling full-disk encryption on this one if you plan on administering it remotely.
