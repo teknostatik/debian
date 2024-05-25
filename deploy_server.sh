@@ -25,7 +25,7 @@ sudo apt -y upgrade
 
 # Install some basic utilities
 
-sudo apt install -y htop git byobu shellcheck irssi rsync curl build-essential
+sudo apt install -y htop git byobu shellcheck irssi rsync curl build-essential avahi-daemon
 
 # Download and install a custom update script
 
