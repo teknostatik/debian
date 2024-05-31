@@ -1,7 +1,6 @@
 #!/bin/bash
 
-# Script to run after installing Debian from the netinstall iso (with or without additional apps).
-# This is based on my Ubuntu script and is in heavy development/testing right now.
+# Script to run after installing Debian from the netinstall iso with a Gnome desktop
 # Comment out any sections that don't interest you.
 # You will need sudo to be installed to make this script work (and to be in the group)
 
@@ -17,6 +16,10 @@ set -euo pipefail
 
 sudo apt install -y software-properties-common
 sudo add-apt-repository contrib non-free
+
+# Remove some things we don't need
+
+sudo apt remove -y gnome-games
 
 # Update software
 
@@ -76,7 +79,7 @@ echo "echo; fastfetch;echo" >> .profile
 
 # Install the applications I use for writing, editing and previewing text
 
-sudo apt install -y pandoc texlive texlive-latex-extra
+sudo apt install -y pandoc texlive texlive-latex-extra abiword
 sudo apt-get install gpg
 wget -qO- https://packages.microsoft.com/keys/microsoft.asc | gpg --dearmor > packages.microsoft.gpg
 sudo install -D -o root -g root -m 644 packages.microsoft.gpg /etc/apt/keyrings/packages.microsoft.gpg
