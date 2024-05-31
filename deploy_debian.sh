@@ -93,6 +93,10 @@ sudo apt install -y code
 
 sudo apt install -y gimp rhythmbox vlc brasero sound-juicer
 
+# Install everything needed for Tor
+
+sudo apt install -y torbrowser-launcher onionshare
+
 # Install Flatpak
 
 # sudo apt install -y flatpak gnome-software-plugin-flatpak
