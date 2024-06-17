@@ -21,4 +21,8 @@ Then download the script and make it executable:
 
 ## Versions
 
-As well as the desktop version, there is now [a script to install a server](https://github.com/teknostatik/debian/blob/master/deploy_server.sh). This has no graphical applications at all, but does have an SSH server to allow remote access. I's recommend _not_ enabling full-disk encryption on this one if you plan on administering it remotely.
+As well as the desktop version, there is now [a script to install a server](https://github.com/teknostatik/debian/blob/master/deploy_server.sh). This has no graphical applications at all, but does have an SSH server to allow remote access. I'd recommend _not_ enabling full-disk encryption on this one if you plan on administering it remotely.
+
+## Note
+
+In both of these scripts there are additional options that are commented out because I don't use them by default, but which might be useful later. 
