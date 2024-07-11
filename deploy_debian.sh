@@ -20,6 +20,7 @@ sudo add-apt-repository contrib non-free
 # Remove some things we don't need
 
 sudo apt remove -y gnome-games
+sudo apt autoremove -y
 
 # Update software
 
