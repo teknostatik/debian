@@ -25,7 +25,7 @@ sudo apt -y upgrade
 
 # Install some basic utilities
 
-sudo apt install -y htop git byobu shellcheck irssi rsync curl build-essential avahi-daemon
+sudo apt install -y htop git byobu shellcheck rsync curl build-essential avahi-daemon
 
 # Download and install a custom update script
 
@@ -40,10 +40,6 @@ sudo dpkg -i fastfetch-linux-amd64.deb
 sudo apt install -y fortune-mod cowsay
 echo "echo; fortune | cowsay;echo" >> .profile
 echo "echo; fastfetch;echo" >> .profile
-
-# Install the applications I use for writing, editing and previewing text
-
-sudo apt install -y pandoc texlive texlive-latex-extra
 
 # Add some aliases
 
