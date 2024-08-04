@@ -41,13 +41,13 @@ wget https://raw.githubusercontent.com/teknostatik/i3_config/main/config
 wget https://raw.githubusercontent.com/teknostatik/i3_config/main/lock.sh
 wget https://raw.githubusercontent.com/teknostatik/i3_config/main/kitty.conf
 wget https://raw.githubusercontent.com/teknostatik/i3_config/main/picom.conf
-mkdir /home/andy/.config/i3
-mv config /home/andy/.config/i3/
+mkdir /home/$WHOAMI/.config/i3
+mv config /home/$WHOAMI/.config/i3/
 sudo mv lock.sh /usr/local/bin/
-mkdir /home/andy/.config/kitty
-mv kitty.conf /home/andy/.config/kitty/
-mkdir /home/andy/.config/picom
-mv picom.conf /home/andy/.config/picom/
+mkdir /home/$WHOAMI/.config/kitty
+mv kitty.conf /home/$WHOAMI/.config/kitty/
+mkdir /home/$WHOAMI/.config/picom
+mv picom.conf /home/$WHOAMI/.config/picom/
 
 # Set up i3 wallpaper
 
