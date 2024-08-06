@@ -29,7 +29,7 @@ sudo apt -y upgrade
 
 # Install some basic utilities
 
-sudo apt install -y htop git byobu synaptic xautolock shellcheck xinit kitty zathura pcmanfm irssi mplayer network-manager-gnome rsync neofetch curl ttf-mscorefonts-installer build-essential gimp rhythmbox vlc brasero sound-juicer lxappearance flameshot pandoc texlive texlive-latex-extra abiword remmina
+sudo apt install -y htop git byobu synaptic xautolock shellcheck xinit zathura network-manager-gnome rsync curl ttf-mscorefonts-installer build-essential gimp rhythmbox vlc brasero sound-juicer lxappearance flameshot pandoc texlive texlive-latex-extra abiword remmina
 
 # Download and install a custom update script
 
@@ -59,7 +59,7 @@ install_vscode() {
 
 # Function to install and configure i3
 install_i3() {
-    sudo apt install -y i3 i3blocks feh arandr scrot xautolock barrier kitty imagemagick polybar caffeine copyq picom blueman
+    sudo apt install -y i3 i3blocks feh arandr scrot xautolock barrier kitty imagemagick polybar caffeine copyq picom blueman pcmanfm 
     wget https://raw.githubusercontent.com/teknostatik/i3_config/main/config
     wget https://raw.githubusercontent.com/teknostatik/i3_config/main/lock.sh
     wget https://raw.githubusercontent.com/teknostatik/i3_config/main/kitty.conf
