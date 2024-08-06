@@ -1,5 +1,50 @@
 #!/bin/bash
 
+# Script to run after installing Debian from the netinstall iso with a Gnome desktop
+# Comment out any sections that don't interest you.
+# You will need sudo to be installed to make this script work (and to be in the group)
+
+echo "-------------------------------------------"
+echo "General purpose Debian installation script "
+echo "-------------------------------------------"
+
+# Standard error mitigation
+
+set -euo pipefail
+
+# Add repositories
+
+sudo apt install -y software-properties-common
+sudo add-apt-repository contrib non-free
+
+# Remove some things we don't need
+
+sudo apt remove -y gnome-games
+sudo apt autoremove -y
+
+# Update software
+
+sudo apt update
+sudo apt -y upgrade
+
+# Install some basic utilities
+
+sudo apt install -y htop git byobu synaptic xautolock shellcheck xinit kitty zathura pcmanfm irssi mplayer network-manager-gnome rsync neofetch curl ttf-mscorefonts-installer build-essential gimp rhythmbox vlc brasero sound-juicer lxappearance flameshot pandoc texlive texlive-latex-extra abiword remmina
+
+# Download and install a custom update script
+
+wget https://raw.githubusercontent.com/teknostatik/updateall/master/updateall
+sudo mv updateall /usr/local/bin/
+sudo chmod 755 /usr/local/bin/updateall
+
+# Install some packages to make remote shells more interesting and then add them to the profile for the logged in user
+
+wget https://github.com/fastfetch-cli/fastfetch/releases/download/2.8.7/fastfetch-linux-amd64.deb
+sudo dpkg -i fastfetch-linux-amd64.deb
+sudo apt install -y fortune-mod cowsay
+echo "echo; fortune | cowsay;echo" >> .profile
+echo "echo; fastfetch;echo" >> .profile
+
 # Function to install vscode
 install_vscode() {
     sudo apt-get install gpg
@@ -109,4 +154,16 @@ read flatpak_choice
 if [[ "$flatpak_choice" == "yes" ]]; then
     install_flatpak
 fi
+
+# Add some aliases
+
+echo "alias ls='ls -la'" >> .bashrc
+echo "alias top='htop'" >> .bashrc
+
+# Set up git
+
+git config --global user.name "Andy Ferguson"
+git config --global user.email "andy@teknostatik.org"
+
+
 
