@@ -45,6 +45,28 @@ sudo apt install -y fortune-mod cowsay
 echo "echo; fortune | cowsay;echo" >> .profile
 echo "echo; fastfetch;echo" >> .profile
 
+# Add some aliases
+
+echo "alias ls='ls -la'" >> .bashrc
+echo "alias top='htop'" >> .bashrc
+
+echo "We are now going to configure git"
+
+# Prompt the user for their full name
+read -p "Enter your full name: " fullname
+
+# Prompt the user for their email address
+read -p "Enter your email address: " email
+
+# Configure git with the provided information
+git config --global user.name "$fullname"
+git config --global user.email "$email"
+
+# Display the configured settings
+echo "Git has been configured with the following details:"
+git config --global --get user.name
+git config --global --get user.email
+
 # Some optional packages, which users can choose to install
 
 # Function to install vscode
@@ -150,17 +172,6 @@ prompt_install "ProtonVPN" install_protonvpn
 prompt_install "Zerotier" install_zerotier
 prompt_install "Unixbench" install_unixbench
 prompt_install "Dropbox" install_dropbox
-
-# Add some aliases
-
-echo "alias ls='ls -la'" >> .bashrc
-echo "alias top='htop'" >> .bashrc
-
-# Set up git 
-# This only works if you are me, which I'll fix at some point
-
-git config --global user.name "Andy Ferguson"
-git config --global user.email "andy@teknostatik.org"
 
 
 
