@@ -23,7 +23,7 @@ Then download the script and make it executable:
 
 As well as the desktop version, there is now [a script to install a server](https://github.com/teknostatik/debian/blob/master/deploy_server.sh). This has no graphical applications at all, but does have an SSH server to allow remote access. I'd recommend _not_ enabling full-disk encryption on this one if you plan on administering it remotely.
 
-There is also [an experimental version to make most of the packages optional](https://github.com/teknostatik/debian/blob/master/deploy_debian_experimental.sh). This needs some robust testing when I have access to all my computers and a much faster internet connection.
+There is also [an experimental version to make most of the packages optional](https://github.com/teknostatik/debian/blob/master/install_debian_experimental.sh). This needs some robust testing when I have access to all my computers and a much faster internet connection.
 
 ## Note
 
