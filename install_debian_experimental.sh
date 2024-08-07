@@ -29,7 +29,32 @@ sudo apt -y upgrade
 
 # Install some basic utilities
 
-sudo apt install -y htop git byobu synaptic xautolock shellcheck xinit zathura network-manager-gnome rsync curl ttf-mscorefonts-installer build-essential gimp rhythmbox vlc brasero sound-juicer lxappearance flameshot pandoc texlive texlive-latex-extra abiword remmina
+sudo apt install -y \
+    htop \
+    git \
+    byobu \
+    synaptic \
+    xautolock \
+    shellcheck \
+    xinit \
+    zathura \
+    network-manager-gnome \
+    rsync \
+    curl \
+    ttf-mscorefonts-installer \
+    build-essential \
+    gimp \
+    rhythmbox \
+    vlc \
+    brasero \
+    sound-juicer \
+    lxappearance \
+    flameshot \
+    pandoc \
+    texlive \
+    texlive-latex-extra \
+    abiword \
+    remmina
 
 # Download and install a custom update script
 
