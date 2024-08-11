@@ -85,8 +85,8 @@ grep -qxF 'echo; fastfetch; echo' "$PROFILE" || echo 'echo; fastfetch; echo' >> 
 
 # Add some aliases
 
-echo "alias ls='ls -la'" >> .bashrc
-echo "alias top='htop'" >> .bashrc
+echo "alias ls='ls -la'" >> /home/$USER/.bashrc
+echo "alias top='htop'" >> /home/$USER/.bashrc
 
 # Configure git
 echo "We are now going to configure git"
