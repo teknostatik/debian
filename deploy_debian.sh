@@ -173,7 +173,7 @@ install_zerotier() {
 
 # Function to install Unixbench
 install_unixbench() {
-    sudo apt-get install libx11-dev libgl1-mesa-dev libxext-dev perl perl-modules make git
+    sudo apt install -y libx11-dev libgl1-mesa-dev libxext-dev perl perl-modules make git
     git clone https://github.com/kdlucas/byte-unixbench.git
 # uncomment tne next 2 lines to run the benchmark now
 # cd byte-unixbench/UnixBench/
