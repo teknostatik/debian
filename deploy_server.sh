@@ -48,8 +48,17 @@ echo "alias top='htop'" >> .bashrc
 
 # Set up git
 
-git config --global user.name "Andy Ferguson"
-git config --global user.email "andy@teknostatik.org"
+echo "We are now going to configure git"
+read -p "Enter your full name: " fullname
+read -p "Enter your email address: " email
+git config --global user.name "$fullname"
+git config --global user.email "$email"
+
+# Display the configured settings for git
+
+echo "Git has been configured with the following details:"
+git config --global --get user.name
+git config --global --get user.email
 
 # Install Zerotier
 
