@@ -1,5 +1,7 @@
 #deb cdrom:[Debian GNU/Linux 12.0.0 _Bookworm_ - Official amd64 NETINST with firmware 20230610-10:21]/ bookworm main non-free-firmware
 
+# can still be used, but script should not require it
+
 deb http://mirror.mythic-beasts.com/debian/ bookworm main non-free-firmware contrib non-free
 deb-src http://mirror.mythic-beasts.com/debian/ bookworm main non-free-firmware contrib non-free
 
