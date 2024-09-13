@@ -137,7 +137,7 @@ install_flatpak() {
 
 # Function to install ProtonVPN
 install_protonvpn() {
-    wget -q https://repo.protonvpn.com/debian/dists/stable/main/binary-all/protonvpn-stable-release_1.0.3-3_all.deb -O /tmp/protonvpn.deb
+    wget -q https://repo.protonvpn.com/debian/dists/stable/main/binary-all/protonvpn-stable-release_1.0.4_all.deb -O /tmp/protonvpn.deb
     sudo dpkg -i /tmp/protonvpn.deb
     sudo apt-get update
     sudo apt-get install -y proton-vpn-gnome-desktop
