@@ -41,7 +41,6 @@ sudo apt install -y \
     network-manager-gnome \
     rsync \
     curl \
-    ttf-mscorefonts-installer \
     build-essential \
     gimp \
     rhythmbox \
@@ -65,7 +64,7 @@ sudo chmod 755 /usr/local/bin/updateall
 # Install some packages to make remote shells more interesting and then add them to the profile for the logged in user
 
 ## Define variables
-FF_VERSION="2.21.0"
+FF_VERSION="2.24.0"
 FF_URL="https://github.com/fastfetch-cli/fastfetch/releases/download/${FF_VERSION}/fastfetch-linux-amd64.deb"
 TEMP_DEB="$(mktemp)" # Create a temporary file for the .deb download
 
@@ -87,18 +86,6 @@ grep -qxF 'echo; fastfetch; echo' "$PROFILE" || echo 'echo; fastfetch; echo' >> 
 
 echo "alias ls='ls -la'" >> /home/$USER/.bashrc
 echo "alias top='htop'" >> /home/$USER/.bashrc
-
-# Configure git
-echo "We are now going to configure git"
-read -p "Enter your full name: " fullname
-read -p "Enter your email address: " email
-git config --global user.name "$fullname"
-git config --global user.email "$email"
-
-# Display the configured settings for git
-echo "Git has been configured with the following details:"
-git config --global --get user.name
-git config --global --get user.email
 
 # Some optional packages, which users can choose to install
 
@@ -171,6 +158,26 @@ install_unixbench() {
 # ./Run
 }
 
+# Function to install and configure Git
+install_git() {
+    sudo apt install -y git
+    echo "We are now going to configure git"
+    read -p "Enter your full name: " fullname
+    read -p "Enter your email address: " email
+    git config --global user.name "$fullname"
+    git config --global user.email "$email"
+    # Display the configured settings for git
+    echo "Git has been configured with the following details:"
+    git config --global --get user.name
+    git config --global --get user.email
+}
+
+# Function to install non-free codecs and fonts
+install_nonfree() {
+    sudo apt install -y \
+    ttf-mscorefonts-installer
+}
+
 # Fuction to install Dropbox
 install_dropbox() {
     sudo apt install -y nautilus-dropbox
@@ -195,6 +202,8 @@ prompt_install "flatpak" install_flatpak
 prompt_install "ProtonVPN" install_protonvpn
 prompt_install "Zerotier" install_zerotier
 prompt_install "Unixbench" install_unixbench
+prompt_install "and configure Git" install_git
+prompt_install "Non-free fonts" install_nonfree
 prompt_install "Dropbox" install_dropbox
 
 echo "The script has now finished running."
