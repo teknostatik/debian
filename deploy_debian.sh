@@ -53,6 +53,7 @@ sudo apt install -y \
     texlive \
     texlive-latex-extra \
     abiword \
+    pcmanfm \
     remmina
 
 # Download and install a custom update script
