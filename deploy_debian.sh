@@ -115,11 +115,9 @@ install_tor() {
 
 # Function to install DisplayLink
 install_displaylink() {
-    git clone https://github.com/AdnanHodzic/displaylink-debian.git /tmp/displaylink-debian
-    echo "Do not reboot when given the option. You will need to reboot before trying to use your docking station."
-    sudo /tmp/displaylink-debian/displaylink-debian.sh
-    wget -q https://raw.githubusercontent.com/teknostatik/debian/master/20-displaylink.conf -O /etc/X11/xorg.conf.d/20-displaylink.conf
-    rm -rf /tmp/displaylink-debian
+    git clone https://github.com/AdnanHodzic/displaylink-debian.git
+    cd displaylink-debian
+    sudo ./displaylink-debian.sh
 }
 
 # Function to install snapd
