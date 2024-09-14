@@ -25,7 +25,15 @@ sudo apt -y upgrade
 
 # Install some basic utilities
 
-sudo apt install -y htop git byobu shellcheck rsync curl build-essential avahi-daemon
+sudo apt install -y \
+    htop \
+    git \
+    byobu \
+    shellcheck \
+    rsync \
+    curl \
+    build-essential \
+    avahi-daemon
 
 # Download and install a custom update script
 
