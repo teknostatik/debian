@@ -33,6 +33,7 @@ sudo apt install -y \
     rsync \
     curl \
     build-essential \
+    openssh-server \
     avahi-daemon
 
 # Download and install a custom update script
