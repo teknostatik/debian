@@ -29,32 +29,19 @@ sudo apt -y upgrade
 
 # Install some basic utilities
 
+s# Install some basic utilities
+
 sudo apt install -y \
     htop \
     git \
     byobu \
     synaptic \
-    xautolock \
     shellcheck \
-    xinit \
-    zathura \
-    network-manager-gnome \
     rsync \
     curl \
     build-essential \
-    gimp \
-    rhythmbox \
-    vlc \
-    brasero \
-    sound-juicer \
-    lxappearance \
-    flameshot \
-    pandoc \
-    texlive \
-    texlive-latex-extra \
-    abiword \
-    pcmanfm \
-    remmina
+    net-tools \
+    eza
 
 # Download and install a custom update script
 
@@ -89,6 +76,27 @@ echo "alias ls='ls -la'" >> /home/$USER/.bashrc
 echo "alias top='htop'" >> /home/$USER/.bashrc
 
 # Some optional packages, which users can choose to install
+
+# Function to install some optional packages
+install_more_apps() {
+    sudo apt install -y \
+    gimp \
+    rhythmbox \
+    vlc \
+    brasero \
+    sound-juicer \
+    cdparanoia \
+    flameshot \
+    pandoc \
+    texlive \
+    texlive-latex-extra \
+    remmina \
+    imagemagick \
+    caffeine \
+    gnome-shell-extensions \
+    gnome-tweaks
+}
+
 
 # Function to install vscode
 install_vscode() {
@@ -183,6 +191,31 @@ install_dropbox() {
     dropbox start -i
 }
 
+ Function to install, but not configure, QMK
+install_qmk() {
+    sudo apt install -y git pipx
+    pipx install qmk
+    pipx ensurepath
+}
+
+# Function to install and enable UFW
+install_ufw() {
+    sudo apt install -y ufw
+    sudo ufw enable
+}
+
+# Function to enable fuse v2
+install_fuse2() {
+    sudo apt install -y libfuse2t64
+}
+
+# Function to install smartinstall
+install_smartinstall() {
+    sudo cp smartinstall.sh /usr/local/bin/smartinstall
+    sudo chmod 755 /usr/local/bin/smartinstall
+}
+
+
 # Prompt function
 prompt_install() {
     read -p "Do you want to install $1? (yes/no): " choice
@@ -203,6 +236,10 @@ prompt_install "Zerotier" install_zerotier
 prompt_install "Unixbench" install_unixbench
 prompt_install "and configure Git" install_git
 prompt_install "Non-free fonts" install_nonfree
+prompt_install "smartinstall, a script for installing packages using apt, snap, or flatpak" install_smartinstall
+prompt_install "and enable UFW (uncomplicated firewall)" install_ufw
+prompt_install "but don't configure, QMK" install_qmk
+prompt_install "smartinstall, a script for installing packages using apt, snap, or flatpak" install_smartinstall
 prompt_install "Dropbox" install_dropbox
 
 echo "The script has now finished running."
