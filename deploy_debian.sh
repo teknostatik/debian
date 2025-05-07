@@ -29,8 +29,6 @@ sudo apt -y upgrade
 
 # Install some basic utilities
 
-s# Install some basic utilities
-
 sudo apt install -y \
     htop \
     git \
@@ -191,7 +189,7 @@ install_dropbox() {
     dropbox start -i
 }
 
- Function to install, but not configure, QMK
+# Function to install, but not configure, QMK
 install_qmk() {
     sudo apt install -y git pipx
     pipx install qmk
@@ -208,13 +206,6 @@ install_ufw() {
 install_fuse2() {
     sudo apt install -y libfuse2t64
 }
-
-# Function to install smartinstall
-install_smartinstall() {
-    sudo cp smartinstall.sh /usr/local/bin/smartinstall
-    sudo chmod 755 /usr/local/bin/smartinstall
-}
-
 
 # Prompt function
 prompt_install() {
@@ -236,7 +227,6 @@ prompt_install "Zerotier" install_zerotier
 prompt_install "Unixbench" install_unixbench
 prompt_install "and configure Git" install_git
 prompt_install "Non-free fonts" install_nonfree
-prompt_install "smartinstall, a script for installing packages using apt, snap, or flatpak" install_smartinstall
 prompt_install "and enable UFW (uncomplicated firewall)" install_ufw
 prompt_install "but don't configure, QMK" install_qmk
 prompt_install "smartinstall, a script for installing packages using apt, snap, or flatpak" install_smartinstall
