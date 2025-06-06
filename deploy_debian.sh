@@ -38,8 +38,7 @@ sudo apt install -y \
     rsync \
     curl \
     build-essential \
-    net-tools \
-    eza
+    net-tools
 
 # Download and install a custom update script
 
