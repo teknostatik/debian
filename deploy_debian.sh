@@ -38,6 +38,7 @@ sudo apt install -y \
     rsync \
     curl \
     build-essential \
+    ripgrep \
     net-tools
 
 # Download and install a custom update script
@@ -121,9 +122,10 @@ install_tor() {
 
 # Function to install DisplayLink
 install_displaylink() {
-    git clone https://github.com/AdnanHodzic/displaylink-debian.git
-    cd displaylink-debian
-    sudo ./displaylink-debian.sh
+    wget https://www.synaptics.com/sites/default/files/synaptics-repository-keyring.deb -P ~/Downloads
+    sudo apt install ./Downloads/synaptics-repository-keyring.deb
+    sudo apt update
+    sudo apt install -y displaylink-driver
 }
 
 # Function to install snapd
@@ -206,6 +208,14 @@ install_fuse2() {
     sudo apt install -y libfuse2t64
 }
 
+# Function to install Kitty
+install_kitty() {
+    sudo apt install -y kitty
+    mkdir -p ~/.config/kitty
+    wget https://raw.githubusercontent.com/teknostatik/i3_config/main/kitty.conf -O ~/.config/kitty/kitty.conf
+}
+
+
 # Prompt function
 prompt_install() {
     read -p "Do you want to install $1? (yes/no): " choice
@@ -219,6 +229,7 @@ prompt_install "Visual Studio Code" install_vscode
 prompt_install "i3 tiling window manager" install_i3
 prompt_install "Tor browser and Onionshare" install_tor
 prompt_install "DisplayLink docking station support" install_displaylink
+prompt_install "Kitty terminal and a sensible default configuration" install_kitty
 prompt_install "snapd" install_snapd
 prompt_install "flatpak" install_flatpak
 prompt_install "ProtonVPN" install_protonvpn
