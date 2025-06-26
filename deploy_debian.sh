@@ -239,7 +239,6 @@ prompt_install "and configure Git" install_git
 prompt_install "Non-free fonts" install_nonfree
 prompt_install "and enable UFW (uncomplicated firewall)" install_ufw
 prompt_install "but don't configure, QMK" install_qmk
-prompt_install "smartinstall, a script for installing packages using apt, snap, or flatpak" install_smartinstall
 prompt_install "Dropbox" install_dropbox
 
 echo "The script has now finished running."
