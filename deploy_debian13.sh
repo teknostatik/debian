@@ -12,11 +12,6 @@ echo "-------------------------------------------"
 
 set -euo pipefail
 
-# Add repositories
-
-sudo apt install -y software-properties-common
-sudo add-apt-repository -y contrib non-free non-free-firmware
-
 # Remove some things we don't need
 
 sudo apt remove -y gnome-games
@@ -227,7 +222,7 @@ prompt_install() {
 # Main script to prompt user and call installation functions
 prompt_install "Visual Studio Code" install_vscode
 prompt_install "i3 tiling window manager" install_i3
-prompt_install "Tor browser and Onionshare" install_tor
+#prompt_install "Tor browser and Onionshare" install_tor
 prompt_install "DisplayLink docking station support" install_displaylink
 prompt_install "Kitty terminal and a sensible default configuration" install_kitty
 prompt_install "snapd" install_snapd
@@ -236,7 +231,7 @@ prompt_install "ProtonVPN" install_protonvpn
 prompt_install "Zerotier" install_zerotier
 prompt_install "Unixbench" install_unixbench
 prompt_install "and configure Git" install_git
-prompt_install "Non-free fonts" install_nonfree
+#prompt_install "Non-free fonts" install_nonfree
 prompt_install "and enable UFW (uncomplicated firewall)" install_ufw
 prompt_install "but don't configure, QMK" install_qmk
 prompt_install "Dropbox" install_dropbox
